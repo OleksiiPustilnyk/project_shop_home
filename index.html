@@ -14,6 +14,10 @@
     />
 
     <link rel="stylesheet" href="reset.css" />
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -52,34 +56,35 @@
           </div>
           <div class="col-3">
             <div class="search-and-border-cart">
-            <div class="search-and-icon-search">
-              <input
-                class="search"
-                placeholder="search"
-                name="searh"
-                type="search"
-              />
-              <div class="border-search"><div class="icon-search" aria-hidden="true"></div></div>
+              <div class="search-and-icon-search">
+                <input
+                  class="search"
+                  placeholder="search"
+                  name="searh"
+                  type="search"
+                />
+                <div class="border-search">
+                  <div class="icon-search" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="icon-cart">
+                <i class="num" id="products-count">0</i>
+              </div>
             </div>
-            <div class="icon-cart"><i class="num" id="products-count">0</i></div>
+          </div>
+        </div>
       </div>
-         </div> 
     </header>
     <main class="main">
       <section class="slider-wrap">
         <div class="conteiner">
           <div class="col-12">
-            <div class="slider-number">Slide #3<i class="icon-arrow-left"></i><i class="icon-arrow-right"></i></div>
-            <!-- <div class="slide-checkbox">
-            <input type="checkbox" class="slide-checkbox-input" id="slide-1"/>
-            <label for="slide-1" class="slide-checkbox-label"></label>
-            <input type="checkbox" class="slide-checkbox-input" id="slide-2"/>
-            <label for="slide-2" class="slide-checkbox-label"></label>
-            <input type="checkbox" class="slide-checkbox-input" id="slide-3"/>
-            <label for="slide-3" class="slide-checkbox-label"></label>
-            <input type="checkbox" class="slide-checkbox-input" id="slide-4"/>
-            <label for="slide-4" class="slide-checkbox-label"></label>
-            </div> -->
+            <div class="slider">
+              <div>Slide #1</div>
+              <div>Slide #2</div>
+              <div>Slide #3</div>
+              <div>Slide #4</div>
+            </div>
           </div>
         </div>
       </section>
@@ -90,38 +95,94 @@
               <div class="filter">
                 <div class="filter-type-color-ram">
                   <div class="filter-title-features">Device type</div>
-                <input type="checkbox" class="filter-checkbox-input" id="laptop"/>
-                <label for="laptop" class="filter-checkbox-label">Laptop</label>
-                <input type="checkbox" class="filter-checkbox-input" id="tablet"/>
-                <label for="tablet" class="filter-checkbox-label">Tablet</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="laptop"
+                  />
+                  <label for="laptop" class="filter-checkbox-label"
+                    >Laptop</label
+                  >
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="tablet"
+                  />
+                  <label for="tablet" class="filter-checkbox-label"
+                    >Tablet</label
+                  >
                 </div>
                 <div class="filter-type-color-ram">
                   <div class="filter-title-features">Color</div>
-                <input type="checkbox" class="filter-checkbox-input" id="black"/>
-                <label for="black" class="filter-checkbox-label">Black</label>
-                <input type="checkbox" class="filter-checkbox-input" id="red"/>
-                <label for="red" class="filter-checkbox-label">Red</label>
-                <input type="checkbox" class="filter-checkbox-input" id="green"/>
-                <label for="green" class="filter-checkbox-label">Green</label>
-                <input type="checkbox" class="filter-checkbox-input" id="blue"/>
-                <label for="blue" class="filter-checkbox-label">Blue</label>
-                <input type="checkbox" class="filter-checkbox-input" id="orange"/>
-                <label for="orange" class="filter-checkbox-label">Orange</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="black"
+                  />
+                  <label for="black" class="filter-checkbox-label">Black</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="red"
+                  />
+                  <label for="red" class="filter-checkbox-label">Red</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="green"
+                  />
+                  <label for="green" class="filter-checkbox-label">Green</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="blue"
+                  />
+                  <label for="blue" class="filter-checkbox-label">Blue</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="orange"
+                  />
+                  <label for="orange" class="filter-checkbox-label"
+                    >Orange</label
+                  >
                 </div>
                 <div class="filter-type-color-ram">
                   <div class="filter-title-features">Ram</div>
-                <input type="checkbox" class="filter-checkbox-input" id="1-gb"/>
-                <label for="1-gb" class="filter-checkbox-label">1 GB</label>
-                <input type="checkbox" class="filter-checkbox-input" id="2-gb"/>
-                <label for="2-gb" class="filter-checkbox-label">2 GB</label>
-                <input type="checkbox" class="filter-checkbox-input" id="4-gb"/>
-                <label for="4-gb" class="filter-checkbox-label">4 GB</label>
-                <input type="checkbox" class="filter-checkbox-input" id="6-gb"/>
-                <label for="6-gb" class="filter-checkbox-label">6 GB</label>
-                <input type="checkbox" class="filter-checkbox-input" id="8-gb"/>
-                <label for="8-gb" class="filter-checkbox-label">8 GB</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="1-gb"
+                  />
+                  <label for="1-gb" class="filter-checkbox-label">1 GB</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="2-gb"
+                  />
+                  <label for="2-gb" class="filter-checkbox-label">2 GB</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="4-gb"
+                  />
+                  <label for="4-gb" class="filter-checkbox-label">4 GB</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="6-gb"
+                  />
+                  <label for="6-gb" class="filter-checkbox-label">6 GB</label>
+                  <input
+                    type="checkbox"
+                    class="filter-checkbox-input"
+                    id="8-gb"
+                  />
+                  <label for="8-gb" class="filter-checkbox-label">8 GB</label>
                 </div>
-                <div class="filter-show-more-options">Show more options ...</div>
+                <div class="filter-show-more-options">
+                  Show more options ...
+                </div>
                 <button class="btn filter-btn-submit">Submit</button>
               </div>
             </aside>
@@ -129,23 +190,25 @@
               <div class="row">
                 <div class="col-12">
                   <div class="breadcrumbs">
-                  <a href="">Home page ></a>
-                  <a href="">Products ></a>
-                  <a href="">Laptops and Tablets</a>
+                    <a href="">Home page ></a>
+                    <a href="">Products ></a>
+                    <a href="">Laptops and Tablets</a>
+                  </div>
                 </div>
-              </div>
               </div>
               <div class="row">
                 <div class="col-8">Laptos and Tablets</div>
                 <div class="col-4">
                   <div class="dropdwn-sort">
-                    <div class="sort-content"><a href="">sort by price<i class="icon-arrow-2"></i></a></div>
+                    <div class="sort-content">
+                      <a href="">sort by price<i class="icon-arrow-2"></i></a>
+                    </div>
                     <div class="dropdwn-sort-content">
                       <a href="">sort by name</a>
                       <a href="">sort by date</a>
                       <a href="">sort by popularity</a>
                     </div>
-                    </div>
+                  </div>
                 </div>
               </div>
               <div class="row-product">
@@ -157,19 +220,21 @@
                       <div class="like"></div>
                     </div>
                     <div class="product-title">#1 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 599 <sup>25</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -177,22 +242,24 @@
                     <div class="product-image">
                       <img src="images/TV.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#2 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 1250 <sup>99</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -200,22 +267,24 @@
                     <div class="product-image">
                       <img src="images/clock.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#3 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 399 <sup>50</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -223,22 +292,24 @@
                     <div class="product-image">
                       <img src="images/imac.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#1 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 599 <sup>25</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -246,22 +317,24 @@
                     <div class="product-image">
                       <img src="images/ipod.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#2 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 1250 <sup>99</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -269,22 +342,24 @@
                     <div class="product-image">
                       <img src="images/iphone.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#3 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 399 <sup>50</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -292,22 +367,24 @@
                     <div class="product-image">
                       <img src="images/ipad.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#1 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 599 <sup>25</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -315,22 +392,24 @@
                     <div class="product-image">
                       <img src="images/TV.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#2 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 1250 <sup>99</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <div class="col-4">
@@ -338,22 +417,24 @@
                     <div class="product-image">
                       <img src="images/clock.png" alt="" />
                       <div class="zoom"></div>
-                      <div class="like"></div>
+                      <div class="like" id="like"></div>
                     </div>
                     <div class="product-title">#3 Device Name</div>
-                    <p class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    <p class="product-description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    </p>
                     <div class="product-features">
                       <span>Type:</span> Laptop
                     </div>
                     <div class="product-features">
                       <span>Screen size:</span> 7 inches
                     </div>
-                    <div class="product-features">
-                      <span>Ram:</span> 1 GB
-                    </div>
+                    <div class="product-features"><span>Ram:</span> 1 GB</div>
                     <div class="product-price">$ 399 <sup>50</sup></div>
                     <button class="btn btn-more-details">More details</button>
-                    <button class="btn btn-add-to-cart">Add to cart<i class="icon-cart-white"></i></button>
+                    <button class="btn btn-add-to-cart">
+                      Add to cart<i class="icon-cart-white"></i>
+                    </button>
                   </div>
                 </div>
                 <i class="load">Load more ...</i>
@@ -364,6 +445,34 @@
       </section>
     </main>
     <footer class="footer">© Copyright 2017</footer>
+
+    <div class="modal hide">
+      <div class="modal-block">
+        <form action="">
+          <div class="modal-btn-icon-close">
+            <div class="btn-close"></div>
+          </div>
+          <h3 class="modal-header">Please call for more details</h3>
+          <div class="form-field">
+            <input type="text" placeholder="Your name" />
+          </div>
+          <div class="form-field">
+            <input type="text" placeholder="Your phone" />
+          </div>
+          <button class="modal-btn-send">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
 
     <script src="app.js"></script>
   </body>
