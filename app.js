@@ -102,3 +102,55 @@ modal.addEventListener("click", function (e) {
 $(".slider").slick({
   dots: true,
 });
+
+// Counter (лічильник)
+
+//
+function Counter(incrementBtn, decrementBtn, inputField) {
+  this.domRefs = {
+    incrementBtn,
+    decrementBtn,
+    inputField,
+  };
+
+  // функція щоб кнопка не була активна
+  this.toggleButtonsState = function () {
+    let count = +this.domRefs.inputField.value; // значення в інпут не менше 1 і не більше 10
+
+    this.domRefs.decrementBtn.disabled = count <= 1; // коли товар 1 кнопка "-" не активна
+    this.domRefs.incrementBtn.disabled = count >= 10; // коли товарів 10 кнопка "+" не активна
+  };
+  this.toggleButtonsState();
+
+  // функція щоб кнопка "+" додавала один товар
+  this.increment = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+    this.toggleButtonsState(); // щоб кнопка не була активна
+  };
+
+  // функція щоб кнопка "-" віднімала один товар
+  this.decrement = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+    this.toggleButtonsState(); // щоб кнопка не була активна
+  };
+
+  // при кліку добавити і відняти товар
+  this.domRefs.incrementBtn.addEventListener(
+    "click",
+    this.increment.bind(this)
+  );
+  this.domRefs.decrementBtn.addEventListener(
+    "click",
+    this.decrement.bind(this)
+  );
+  console.log(this);
+}
+
+// найти кнопки і інпут
+let counter = new Counter(
+  document.querySelectorAll(".increment-button")[0],
+  document.querySelectorAll(".decrement-button")[0],
+  document.querySelectorAll(".product-quantity input")[0]
+);
+
+console.log(counter);
