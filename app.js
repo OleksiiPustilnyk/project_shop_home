@@ -105,6 +105,11 @@ $(".slider").slick({
 
 // Counter (лічильник)
 
+// находимо елемент
+let incrementBtn = document.querySelectorAll(".increment-button");
+let decrementBtn = document.querySelectorAll(".decrement-button");
+let inputField = document.querySelectorAll(".product-quantity input");
+
 //
 function Counter(incrementBtn, decrementBtn, inputField) {
   this.domRefs = {
@@ -146,11 +151,10 @@ function Counter(incrementBtn, decrementBtn, inputField) {
   console.log(this);
 }
 
-// найти кнопки і інпут
-let counter = new Counter(
-  document.querySelectorAll(".increment-button")[0],
-  document.querySelectorAll(".decrement-button")[0],
-  document.querySelectorAll(".product-quantity input")[0]
-);
+//  для того щоб всі лічильники були активні
+let counters = [];
 
-console.log(counter);
+inputField.forEach(
+  (item, i) =>
+    (counters[i] = new Counter(incrementBtn[i], decrementBtn[i], item))
+);
